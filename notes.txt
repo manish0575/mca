@@ -1,0 +1,65 @@
+Algorithms – Simple Meaning + Complexity
+Binary Search
+Kisi sorted list mein number jaldi se search karna.
+→ Beech ka number check karke left ya right side chale jaate hain.
+Complexity: O(log n)
+
+Euclid GCD
+Do numbers ka GCD/HCF nikalna.
+→ Baar-baar % (mod) karte hain jab tak remainder 0 na aa jaye.
+Complexity: O(log n)
+
+Merge Sort
+Numbers ko sort (ascending order) karna.
+→ List ko chhote parts mein todte hain, phir sorted form mein jodte hain.
+Complexity: O(n log n)
+
+Quick Sort
+Numbers ko sort karna.
+→ Ek pivot choose karke chhote numbers left aur bade right mein rakhte hain.
+Average: O(n log n)
+Worst: O(n²)
+
+Selection Sort
+Numbers ko sort karna.
+→ Har round mein sabse chhota number dhoondhkar starting mein rakhte hain.
+Complexity: O(n²)
+
+Bubble Sort
+Numbers ko sort karna.
+→ Side-by-side numbers compare karke bade number ko right bhejte hain.
+Complexity: O(n²)
+(Basic version)
+
+Fractional Knapsack
+Limited capacity mein maximum profit nikalna.
+→ Jiska profit/weight ratio sabse zyada, use pehle lete hain. Item ka kuch part bhi le sakte hain.
+Complexity: O(n log n)
+
+Task Scheduling / SJF
+Jobs ko aise arrange karna ki waiting/total time kam ho.
+→ Chhota service time wala job pehle.
+Complexity: O(n log n)
+
+Huffman Coding
+Data ko kam bits mein represent/compress karna.
+→ Kam frequency wale letters ko pehle combine karte hain.
+Complexity: O(n log n)
+
+Matrix Multiplication
+Do matrices ko multiply karke third matrix banana.
+→ 3 loops use hote hain: row × column × elements.
+Complexity: O(n³)
+
+
+🧠 Ek line mein yaad kar
+Binary Search    → Number search       → O(log n)
+Euclid           → GCD/HCF             → O(log n)
+Merge Sort       → Sorting              → O(n log n)
+Quick Sort       → Sorting              → O(n log n) average
+Selection Sort   → Sorting              → O(n²)
+Bubble Sort      → Sorting              → O(n²)
+Knapsack         → Maximum profit       → O(n log n)
+Task Scheduling  → Minimum waiting time → O(n log n)
+Huffman          → Data compression     → O(n log n)
+Matrix Multiply  → Matrix multiplication→ O(n³)

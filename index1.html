@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doctor Appointment</title>
+
+    <script>
+        function validateForm()
+        {
+            let fields = document.querySelectorAll("input, select, textarea");
+
+            for(let i = 0; i < fields.length; i++)
+            {
+                if(fields[i].value == "")
+                {
+                    alert("Please fill all fields");
+                    fields[i].focus();
+                    return false;
+                }
+            }
+
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+
+<h2>Doctor Appointment Form</h2>
+
+<form action="insert.php" method="post"
+      onsubmit="return validateForm()">
+
+    Name:
+    <input type="text" name="name">
+    <br><br>
+
+    Email:
+    <input type="email" name="email">
+    <br><br>
+
+    Phone:
+    <input type="text" name="phone">
+    <br><br>
+
+    Select Doctor:
+    <select name="doctor">
+        <option value="">Select Doctor</option>
+        <option value="Dr. Sharma">Dr. Sharma</option>
+        <option value="Dr. Verma">Dr. Verma</option>
+        <option value="Dr. Singh">Dr. Singh</option>
+    </select>
+    <br><br>
+
+    Appointment Date:
+    <input type="date" name="date">
+    <br><br>
+
+    Appointment Time:
+    <input type="time" name="time">
+    <br><br>
+
+    Problem:
+    <textarea name="problem"></textarea>
+    <br><br>
+
+    <input type="submit" value="Book Appointment">
+    <input type="reset" value="Reset">
+
+</form>
+
+</body>
+</html>
+

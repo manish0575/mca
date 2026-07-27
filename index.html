@@ -1,0 +1,77 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Satisfaction Survey</title>
+
+    <script>
+        function validateForm()
+        {
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let feedback = document.getElementById("feedback").value;
+
+            if(name == "")
+            {
+                alert("Please enter your name");
+                return false;
+            }
+
+            if(email == "")
+            {
+                alert("Please enter your email");
+                return false;
+            }
+
+            if(document.querySelector('input[name="rating"]:checked') == null)
+            {
+                alert("Please select a rating");
+                return false;
+            }
+
+            if(feedback == "")
+            {
+                alert("Please enter your feedback");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+
+<h2>Customer Satisfaction Survey</h2>
+<h3>Product: ABC | Company: XYZ</h3>
+
+<form action="insert.php" method="post"
+      onsubmit="return validateForm()">
+
+    Name:
+    <input type="text" name="name" id="name">
+    <br><br>
+
+    Email:
+    <input type="email" name="email" id="email">
+    <br><br>
+
+    Product Rating:
+    <input type="radio" name="rating" value="Excellent"> Excellent
+    <input type="radio" name="rating" value="Good"> Good
+    <input type="radio" name="rating" value="Average"> Average
+    <input type="radio" name="rating" value="Poor"> Poor
+    <br><br>
+
+    Feedback:
+    <textarea name="feedback" id="feedback"></textarea>
+    <br><br>
+
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+
+</form>
+
+</body>
+</html>
+```
